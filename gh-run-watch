@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
 set -e
 
-if gh run watch "$1" --exit-status
+CMD="$(node -e '
+const x = String(process.argv[1])
+let m
+if (x.match(/^\d+$/)) {
+  console.log(`gh run watch ${x}`)
+} else if (m = x.match(/([^/]+)\/([^/]+)\/actions\/runs\/(\d+)/)) {
+  console.log(`gh run watch ${m[3]} --repo=${m[1]}/${m[2]}`)
+} else {
+  console.error("Invalid build ID or run URL")
+  process.exit(1)
+}
+' -- "$1")"
+
+if $CMD --exit-status
 then
   echo "[Build succeeded]"
   say "Build succeeded."
