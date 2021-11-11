@@ -1,0 +1,16 @@
+= gh-run-watch
+
+Waits for a GitHub Actions Workflow Run to finish and then *speaks out loud* whether it was successful or not.
+Useful when the CI can take some time and you are easily distracted.
+
+== Prerequisites
+
+* The `say` binary available in your PATH. (macOS has this by default.)
+* Node.js installed.
+
+== How to use
+
+[source,sh]
+----
+gh run-watch https://github.com/user/repo/actions/runs/123456789
+----

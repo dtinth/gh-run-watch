@@ -11,6 +11,5 @@ gh extension install dtinth/gh-run-watch
 ## How to use
 
 ```bash
-cd ~/repo
-gh run-watch 123456789
+gh run-watch https://github.com/user/repo/actions/runs/123456789
 ```
