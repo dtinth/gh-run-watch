@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+
+if gh run watch "$1" --exit-status
+then
+  echo "[Build succeeded]"
+  say "Build succeeded"
+else
+  echo -e "\e[1;31m[Build failed]\e[0m"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+  say "Build failed"
+fi
