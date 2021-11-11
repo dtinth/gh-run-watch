@@ -4,17 +4,8 @@ set -e
 if gh run watch "$1" --exit-status
 then
   echo "[Build succeeded]"
-  say "Build succeeded"
+  say "Build succeeded."
 else
   echo -e "\033[1;31m[Build failed]\033[0m"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
-  say "Build failed"
+  say 'Build failed! Attention, build failed!'
 fi
