@@ -8,8 +8,13 @@ if (x.match(/^\d+$/)) {
   console.log(`gh run watch ${x}`)
 } else if (m = x.match(/([^/]+)\/([^/]+)\/actions\/runs\/(\d+)/)) {
   console.log(`gh run watch ${m[3]} --repo=${m[1]}/${m[2]}`)
+} else if (x.match(/:\/\//)) {
+  console.error("GitHub Actions Workflow Run URL expected.")
+  console.error("Make sure you used the URL of the workflow summary page,")
+  console.error("and not the URL of individual job run.")
+  process.exit(1)
 } else {
-  console.error("Invalid build ID or run URL")
+  console.error("Numeric build ID or Workflow Run URL expected.")
   process.exit(1)
 }
 ' -- "$1")"
