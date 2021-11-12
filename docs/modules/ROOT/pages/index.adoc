@@ -8,6 +8,14 @@ Useful when the CI can take some time and you are easily distracted.
 
 * The `say` binary available in your PATH. (macOS has this by default.)
 * Node.js installed.
+* `gh` CLI installed.
+
+== How to install
+
+[source,sh]
+----
+gh extension install dtinth/gh-run-watch
+----
 
 == How to use
 
