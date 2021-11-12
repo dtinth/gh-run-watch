@@ -1,5 +1,5 @@
 name: gh-run-watch
 version: master
-title: 'gh-run-watch'
+title: 'gh run-watch'
 nav:
   - modules/ROOT/nav.adoc

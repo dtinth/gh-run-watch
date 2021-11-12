@@ -1,4 +1,4 @@
-= gh-run-watch
+= gh run-watch
 
 Waits for a GitHub Actions Workflow Run to finish and then *speaks out loud* whether it was successful (_“Build succeeded.”_) or not (_“Build failed! Attention, build failed!”_).
 
